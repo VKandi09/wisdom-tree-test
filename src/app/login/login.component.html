@@ -1,0 +1,40 @@
+<div class="login-overlay">
+    <div class="login-container">
+      <h2 class="login-heading">Login</h2>
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="userId">User ID<span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="userId" 
+            formControlName="userId" 
+            class="form-control" 
+            placeholder="User ID">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password<span class="required">*</span></label>
+          <input 
+            type="password" 
+            id="password" 
+            formControlName="password" 
+            class="form-control" 
+            placeholder="Password">
+        </div>
+        
+        <button type="submit" class="login-button" [disabled]="!loginForm.valid">Login</button>
+      </form>
+      
+      <div class="links-container">
+        <a href="#" class="forgot-link">Forgot Password</a>
+        <span class="separator">|</span>
+        <a href="#" class="forgot-link">Forgot User ID</a>
+      </div>
+      
+      <div class="new-investor">
+        <p>New Investor?</p>
+        <button class="enroll-button" (click)="navigateToSignup()">Create New Account</button>
+      </div>
+    </div>
+  </div>

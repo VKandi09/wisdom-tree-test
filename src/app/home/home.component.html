@@ -1,0 +1,41 @@
+<!-- Top Navigation -->
+<nav class="top-nav">
+    <div class="nav-content">
+      <ul class="nav-list">
+        <li *ngFor="let item of topNavItems" class="nav-item">
+          {{ item.name }}
+          <span *ngIf="item.dropdownEnabled" class="dropdown-arrow">▼</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">
+        <img src="assets/wisdom-tree-logo.jpg" alt="WisdomTree">
+      </div>
+      <ul class="nav-list">
+        <li *ngFor="let item of mainNavItems" class="nav-item">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Content Section -->
+  <section class="hero" [style.backgroundImage]="'url(assets/banner.jpeg)'">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span>WELCOME</span>
+        <span>TO THE FUTURE</span>
+        <span>OF FINANCE</span>
+      </h1>
+      <app-login></app-login>
+    </div>
+  </section>
+  
+  <app-journey-section></app-journey-section>
+  <!-- <app-leadership-updates></app-leadership-updates> -->
+  <app-footer></app-footer>

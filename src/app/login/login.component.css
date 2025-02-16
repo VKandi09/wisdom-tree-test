@@ -1,0 +1,132 @@
+.login-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInRight 0.8s forwards;
+    animation-delay: 0.8s;
+    margin-top: 0;
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 400;
+    color: black;
+    font-size: 14px;
+}
+
+.required {
+    color: #e53935;
+    margin-left: 2px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 100px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #c62828;
+}
+
+.links-container {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.forgot-link {
+    color: #666;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 6px;
+    color: #666;
+}
+
+.new-investor {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.new-investor p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.enroll-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.enroll-button:hover {
+    background-color: #c62828;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        margin: 20px auto 0;
+        width: 100%;
+        max-width: 320px;
+    }
+}

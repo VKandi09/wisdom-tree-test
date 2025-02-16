@@ -1,0 +1,22 @@
+<section class="journey-section">
+  <div class="container">
+      <h2 class="section-title">Choose your journey</h2>
+      
+      <div class="journey-cards">
+          <div class="journey-card" *ngFor="let card of journeyCards">
+              <div class="card-image" [style.backgroundImage]="'url(assets/' + card.image + ')'"></div>
+              <div class="card-content">
+                  <h3 class="card-title">{{card.title}}</h3>
+                  <p class="card-description">{{card.description}}</p>
+                  <div class="card-buttons">
+                      <a *ngFor="let button of card.buttons" 
+                         [href]="button.link" 
+                         class="card-button">
+                          {{button.text}}
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

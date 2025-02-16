@@ -1,0 +1,96 @@
+.journey-section {
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 42px;
+  color: #1a1a4b;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.journey-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #1a1a4b;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.card-description {
+  color: #4a4a4a;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #00bfa5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #00a896;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .journey-cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-cards {
+      grid-template-columns: 1fr;
+  }
+}

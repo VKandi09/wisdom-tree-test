@@ -1,0 +1,198 @@
+.app-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Top Navigation */
+.top-nav {
+  background-color: #1a1a4b;
+  color: white;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: white;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-nav .nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.main-nav .nav-item {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 480px; /* Increased height to accommodate full login form */
+  overflow: hidden;
+  background-color: #0a0a2e;
+  margin-bottom: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.network-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.network-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 1;
+  opacity: 0.3;
+  animation: flowLine 3s infinite ease-in-out;
+}
+
+.dot {
+  fill: #ffffff;
+  opacity: 0.8;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.hero-title {
+  color: white;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+  padding-top: 0; /* Removed top padding */
+}
+
+.hero-title span {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.hero-title span:nth-child(1) { animation-delay: 0.2s; }
+.hero-title span:nth-child(2) { animation-delay: 0.4s; }
+.hero-title span:nth-child(3) { animation-delay: 0.6s; }
+
+/* Position login component */
+app-login {
+  flex: 0 0 auto;
+  margin-left: 40px;
+  margin-top: 0; /* Removed negative margin */
+}
+
+/* Animations */
+@keyframes flowLine {
+  0% {
+      stroke-dasharray: 0 1500;
+      stroke-dashoffset: 0;
+  }
+  100% {
+      stroke-dasharray: 1500 1500;
+      stroke-dashoffset: -1500;
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 0.4;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive layout */
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .hero {
+      height: auto;
+      min-height: 600px; /* Ensure enough space on mobile */
+  }
+
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+  }
+
+  .hero-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 48px;
+  }
+
+  app-login {
+      margin-left: 0;
+      width: 100%;
+      max-width: 320px;
+  }
+}
